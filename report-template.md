@@ -28,28 +28,32 @@ Once the split happens, a count of the variable is performed. The results for th
 
 Then. There are 2 Logistic Regression Models that are used with the following data:
 *Machine Learning Model 1: Logistic Regression Model based on the Original Data (the data provided by the peer-to-peer lending services company).
-*Machine Learning Model 2: Logistic Regression Model based on the Resampled Data (oversampled data refers to a dataset that has been artificially modified to address class imbalance. Class imbalance occurs when one class has significantly fewer samples than the other class(es) in a binary or multi-class classification problem. In such cases, the model may have difficulty learning patterns from the minority class due to the unequal distribution of samples).
+*Machine Learning Model 2: Logistic Regression Model based on the Resampled Data (oversampled data refers to a dataset artificially modified to address class imbalance. Class imbalance occurs when one class has significantly fewer samples than the other class(es) in a binary or multi-class classification problem. In such cases, the model may have difficulty learning patterns from the minority class due to the unequal distribution of samples).
 
-Below, the results of both models.
+Below are the results of both models.
 
 ## Results
 
-Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
 
 * Machine Learning Model 1:
-  *Accuracy: 99%
-  *Precision for 0 (Low-Risk Loan): 100%
-  *Precision for 1 (High-Risk Loan): 85%
-  *Recall for 0 (Low-Risk Loan): 99%
-  *Recall for 1 (High-Risk Loan): 91%%
+  * Accuracy: 99%
+  * Precision for 0 (Low-Risk Loan): 100%
+  * Precision for 1 (High-Risk Loan): 85%
+  * Recall for 0 (Low-Risk Loan): 99%
+  * Recall for 1 (High-Risk Loan): 91%
 
 * Machine Learning Model 2:
-  * Description of Model 2 Accuracy, Precision, and Recall scores.
+  * Accuracy: 99%
+  * Precision for 0 (Low-Risk Loan): 100%
+  * Precision for 1 (High-Risk Loan): 84%
+  * Recall for 0 (Low-Risk Loan): 99%
+  * Recall for 1 (High-Risk Loan): 99%
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+* The accuracy for Machine Learning Model 1 gives 99% accuracy. Now, the precision when predicting High-Risk Loans is 85%. Although it is a good percentage, the model must be adjusted to increase the numbers. Also, it is important to evaluate once the model is adjusted to see if the precision for the Low-Risk Loan gets affected because it is at 100%.
+* The accuracy for Machine Learning Model 2, based on the above metrics, the Logistic Regression Model with over sampled data shows better metrics than the first Logistic Regression model. Even though the precision for the High-Risk Loans decreased by 1%, meaning that out of the 619 instances, it predicted correctly almost 613. The Recall metric improved from 0.91 to 0.99 for the High-Risk Loans, indicating that the model now identifies 99% of the High-Risk Loans compared to 91% for the first Logistic Regression Model.
+* It is more important to predict the High-Risk Loans than the others.
+* It all depends on which metric is more important for each financial institution. If correctly identifying High-Risk Loans (precision) is the priority, then model 1 may be a better choice than model 2 by 1%. But, if capturing as many Hihgh-Risk Loans as possible, model 2 is better with a recall score of 99% compared to 91% of Machine Learning Model 1.
 
-If you do not recommend any of the models, please justify your reasoning.
+
